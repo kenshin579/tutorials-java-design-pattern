@@ -16,7 +16,6 @@ public class SortedByNameData extends SortedByAgeData {
 
     // 이름을 기준으로 주소록을 정렬
     public void sort() {
-
         Vector _addresses = new Vector();
         String names[] = new String[data.getSize()];
 

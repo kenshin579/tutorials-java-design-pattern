@@ -9,7 +9,10 @@ import java.awt.event.WindowEvent;
 /**
  * 문제점:
  * - 정렬 방식이 변경될 때마다 DB에 접속하여 다시 정보를 얻어온다.
- *  (같은 내용을 포함하는 객체를 필요한 경우에 따라서 계속 만들어냄)
+ * (같은 내용을 포함하는 객체를 필요한 경우에 따라서 계속 만들어냄)
+ * <p/>
+ * 해결책:
+ * - DB에서 가져온 내용을 가지고 clone시킴.
  */
 public class AddressBook implements ActionListener {
 
@@ -69,6 +72,7 @@ public class AddressBook implements ActionListener {
     }
 
     // 원하는 정렬 방식에 따라 반환되는 객체를 달리한다.
+    // 단점: 내용이 같은데 DB에서 다시 가져오는 이슈가 있음 (한번 가져와서 그 데이터를 정렬해주면 좋을 뜻함)
     public void actionPerformed(ActionEvent e) {
 
         Button but = (Button) e.getSource();

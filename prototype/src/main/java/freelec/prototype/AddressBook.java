@@ -82,6 +82,7 @@ public class AddressBook implements ActionListener {
     }
 
     public void listByName() {
+        // data를 입력을 받아서 SortedByNameData 객체안에서 this.data로 clone함
         data = new SortedByNameData(data);
     }
 

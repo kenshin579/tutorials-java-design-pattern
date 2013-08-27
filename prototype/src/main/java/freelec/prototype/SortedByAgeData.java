@@ -19,6 +19,7 @@ public class SortedByAgeData extends Data {
     public SortedByAgeData() {
     }
 
+    // DB에서 가져온 데이터를 addresses에 저장함
     public SortedByAgeData(Address _addresses[]) {
         addresses = new Vector();
         for (int i = 0; i < _addresses.length; i++) {
@@ -35,7 +36,6 @@ public class SortedByAgeData extends Data {
 
     // 나이 순으로 주소록을 정렬
     public void sort() {
-
         Vector _addresses = new Vector();
         int size = 0;
 
@@ -58,13 +58,10 @@ public class SortedByAgeData extends Data {
 
         // 정렬된 ssn을 기준으로 주소록을 정렬을 시킴
         for (int i = 0; i < size; i++) {
-
             String ssn = ssns[i];
 
             for (int j = 0; j < size; j++) {
-
                 Address add = getAddress(j);
-
                 String _ssn = add.getSsn();
 
                 if (ssn.equals(_ssn)) {
@@ -75,11 +72,9 @@ public class SortedByAgeData extends Data {
 
         addresses = _addresses;
         flag = false;
-
     }
 
     public int getSize() {
-
         int size = 0;
 
         if (flag) {
@@ -89,11 +84,9 @@ public class SortedByAgeData extends Data {
         }
 
         return size;
-
     }
 
     public Address getAddress(int index) {
-
         Address add = null;
 
         if (flag) {
@@ -103,11 +96,9 @@ public class SortedByAgeData extends Data {
         }
 
         return add;
-
     }
 
     public String getName(int index) {
-
         Address add = null;
 
         if (flag) {
@@ -119,8 +110,5 @@ public class SortedByAgeData extends Data {
         String name = add.getName();
 
         return name;
-
     }
-
-
 }

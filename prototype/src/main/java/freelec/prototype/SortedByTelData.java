@@ -16,7 +16,6 @@ public class SortedByTelData extends SortedByAgeData {
 
     // 전화 번호 순으로 정렬
     public void sort() {
-
         Vector _addresses = new Vector();
         String tels[] = new String[data.getSize()];
 
@@ -41,7 +40,5 @@ public class SortedByTelData extends SortedByAgeData {
         }
 
         addresses = _addresses;
-
     }
-
 }
