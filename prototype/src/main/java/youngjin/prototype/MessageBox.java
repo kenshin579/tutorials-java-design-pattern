@@ -1,4 +1,6 @@
-package youngjin;
+package youngjin.prototype;
+
+import youngjin.prototype.framework.Product;
 
 public class MessageBox implements Product {
     private char decochar;

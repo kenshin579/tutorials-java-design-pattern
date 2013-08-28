@@ -1,7 +1,7 @@
-package youngjin.idcard;
+package youngjin.factorymethod.idcard;
 
-import youngjin.framework.Factory;
-import youngjin.framework.Product;
+import youngjin.factorymethod.framework.Factory;
+import youngjin.factorymethod.framework.Product;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,10 @@
-package youngjin;
+package youngjin.prototype.framework;
 
 import java.util.HashMap;
 
+/**
+ * Manager 객체에서는 여러 객체(UnderlinePen, MessageBox)를 관리만 해준다.
+ */
 public class Manager {
     private HashMap showcase = new HashMap();
 

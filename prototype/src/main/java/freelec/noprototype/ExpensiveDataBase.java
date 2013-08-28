@@ -19,7 +19,7 @@ public class ExpensiveDataBase {
             //con=DriverManager.getConnection("jdbc:oracle:thin:@"+server+":1521:ORCL","scott","tiger");
             // For MySQL
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://"+ server +":3306/designdb";
+            String url = "jdbc:mysql://" + server + ":3306/designdb";
             con = DriverManager.getConnection(url, "root", "1234");
             stmt = con.createStatement();
         } catch (ClassNotFoundException e) {

@@ -1,8 +1,8 @@
-package youngjin;
+package youngjin.factorymethod;
 
-import youngjin.framework.Factory;
-import youngjin.framework.Product;
-import youngjin.idcard.IDCardFactory;
+import youngjin.factorymethod.framework.Factory;
+import youngjin.factorymethod.framework.Product;
+import youngjin.factorymethod.idcard.IDCardFactory;
 
 public class Main {
     public static void main(String[] args) {

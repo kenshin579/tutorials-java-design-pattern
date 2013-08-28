@@ -1,4 +1,4 @@
-package youngjin.framework;
+package youngjin.factorymethod.framework;
 
 public abstract class Factory {
     public final Product create(String owner) {

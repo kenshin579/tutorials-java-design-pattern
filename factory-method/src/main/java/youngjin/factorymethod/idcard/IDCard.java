@@ -1,6 +1,6 @@
-package youngjin.idcard;
+package youngjin.factorymethod.idcard;
 
-import youngjin.framework.Product;
+import youngjin.factorymethod.framework.Product;
 
 public class IDCard extends Product {
     private String owner;

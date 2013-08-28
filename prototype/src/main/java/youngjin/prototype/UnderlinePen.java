@@ -1,4 +1,6 @@
-package youngjin;
+package youngjin.prototype;
+
+import youngjin.prototype.framework.Product;
 
 public class UnderlinePen implements Product {
     private char ulchar;
