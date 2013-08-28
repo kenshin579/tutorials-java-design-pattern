@@ -15,6 +15,7 @@
         <module>facade</module>
         <module>singleton</module>
         <module>facade</module>
+        <module>facade</module>
     </modules>
 
 
