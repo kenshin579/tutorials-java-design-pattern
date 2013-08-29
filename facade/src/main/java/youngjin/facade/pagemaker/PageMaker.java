@@ -7,6 +7,7 @@ import java.util.Properties;
 public class PageMaker {
     private PageMaker() {
     }
+
     public static void makeWelcomePage(String mailaddr, String filename) {
         try {
             System.out.println("Working Directory = " +
