@@ -1,4 +1,4 @@
-package freelec.facade;
+package freelec.encapsulation;
 
 class MyMathTest {
     public static void main(String[] args) {

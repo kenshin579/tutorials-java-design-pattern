@@ -9,6 +9,9 @@ public class PageMaker {
     }
     public static void makeWelcomePage(String mailaddr, String filename) {
         try {
+            System.out.println("Working Directory = " +
+                    System.getProperty("user.dir"));
+
             Properties mailprop = FileConfig.getProperties("maildata");
             String username = mailprop.getProperty(mailaddr);
             HtmlWriter writer = new HtmlWriter(new FileWriter(filename));

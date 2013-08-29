@@ -1,4 +1,4 @@
-package freelec.facade;
+package freelec.encapsulation;
 
 public class MyMath {
 

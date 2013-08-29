@@ -787,7 +787,7 @@ public class XcelWriter {
 
     public static void main(String args[]) throws java.io.IOException {
 
-
+        // 타개발자에게 기본적인 제공할 Prototype
         try {
             XcelWriter excel = new XcelWriter();
 
@@ -831,8 +831,8 @@ public class XcelWriter {
             excel.setCellValue(3, 0, "temp");
             excel.setCellValue(3, 1, "djflkdjlk");
 
-
-            excel.writeXLS("", "dulee.xls");
+            excel.writeXLS("/Users/ykoh/Desktop/", "dulee.xls");
+            System.out.println("Write completed");
 
         } catch (Exception e) {
             e.printStackTrace();
