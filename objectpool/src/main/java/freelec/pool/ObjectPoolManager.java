@@ -6,7 +6,7 @@ public class ObjectPoolManager {
     private static ObjectPoolManager poolManagerInstance = new ObjectPoolManager();
     // Singleton 객체를 생성한다
 
-    private static final String url = "jdbc:mysql://" + "localhost:3306/factorydb";
+    private static final String url = "jdbc:mysql://" + "localhost:3306/designdb";
 
     // 오라클 사용자를 위한 url
     //private static final String url =  "jdbc:oracle:thin:@"+"127.0.0.1"+":1521:ORCL";

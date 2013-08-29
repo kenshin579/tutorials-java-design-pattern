@@ -36,6 +36,15 @@ public class Person implements Cloneable {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "ssn='" + ssn + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public Object myClone() throws CloneNotSupportedException {
         Object obj = super.clone();
         return obj;

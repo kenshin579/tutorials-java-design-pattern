@@ -1,4 +1,4 @@
-package youngjin;
+package youngjin.simplesingleton;
 
 import java.util.Vector;
 

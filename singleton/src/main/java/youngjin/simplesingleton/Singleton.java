@@ -1,4 +1,4 @@
-package youngjin;
+package youngjin.simplesingleton;
 
 public class Singleton {
     private static Singleton singleton = new Singleton();

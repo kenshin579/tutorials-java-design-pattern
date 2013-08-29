@@ -16,6 +16,7 @@
         <module>singleton</module>
         <module>facade</module>
         <module>facade</module>
+        <module>objectpool</module>
     </modules>
 
 
