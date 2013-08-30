@@ -1,4 +1,4 @@
-package freelec.nocommand;
+package freelec.command;
 
 public interface Command {
     // 모든 menu item 에 적용될 메소드

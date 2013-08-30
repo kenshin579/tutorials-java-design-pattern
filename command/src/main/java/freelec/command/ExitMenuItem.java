@@ -1,4 +1,4 @@
-package freelec.nocommand;
+package freelec.command;
 
 import java.awt.*;
 
