@@ -13,6 +13,7 @@
 내용 정리
 ---------------
 * Factory Method - 하위 클래스에서 인스턴스 작성하기
+* Prototype - 복사해서 인스턴스 만들기
 * Facade - 단순한 창구 (API만 사용해서 코딩)
 * Singleton - 인스턴스 한개만 만들어서 재사용
 * Object Pool
