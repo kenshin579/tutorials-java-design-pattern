@@ -18,4 +18,5 @@
 * Singleton - 인스턴스 한개만 만들어서 재사용
 * Object Pool -
 * Flyweight - 동일한 것을 공유해서 낭비 없애기
-
+* Command - 명령을 클래스로하기
+* Mediator - 중개인을 통해서 처리하기

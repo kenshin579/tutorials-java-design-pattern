@@ -18,5 +18,7 @@
         <module>facade</module>
         <module>objectpool</module>
         <module>flyweight</module>
+        <module>command</module>
+        <module>mediator</module>
     </modules>
 </project>
