@@ -64,12 +64,10 @@ public class ConnectionPool {
 
     // 사용 가능한 Connection 객체를 반환하는 메소드
     public synchronized Connection getConnection() {
-
         Connection con = null;
 
         // 사용 가능한 Connection instance 가 존재 하지 않는다면
-        if (isAvaliable()) {
-
+        if (isNotAvaliable()) { // freePool에 없으면...
             // max 개수 만큼 Connection 객체를 생성한다.
             con = makeMoreConnection();
 
@@ -82,7 +80,7 @@ public class ConnectionPool {
         if (con == null) {
             monitor_flag = true;
             try {
-                wait();
+                wait(); // 누군가 release를 할때까지 대기한다.
                 // 사용 가능한 객체가 반환될 때 까지 대기 시킨다
 
                 con = getFreeConnection();
@@ -109,8 +107,7 @@ public class ConnectionPool {
     // 사용 가능한 Connection 객체가 더 이상 존재하지 않을 때
     // 추가적인 Connection 객체를 생성하는 메소드
     public Connection makeMoreConnection() {
-
-        boolean flag = false;
+        boolean availableFlag = false;
 
         for (int size = occupiedPool.size(); size < max; size++) {
 
@@ -119,14 +116,14 @@ public class ConnectionPool {
             freePool.addElement(makeConnection());
 
             // 추가적으로  생성된 객체는 사용 가능한 상태로 전이 시킨다
-            flag = true;
+            availableFlag = true;
         }
 
         Connection con = null;
 
-        if (flag) {
+        if (availableFlag) {
             con = (Connection) freePool.firstElement();
-            flag = false;
+            availableFlag = false;
         }
 
         return con;
@@ -136,7 +133,7 @@ public class ConnectionPool {
     public synchronized void releaseConnection(Connection con) {
         transferOccupiedToFree(con);
         // 사용 가능한 상태로 전이시킨 다음
-        remove(con);
+        removeConnectionFromOccupiedPool(con);
         // Connection 객체와의 테이타 베이스 사이의 연결을 종료
 
         // 사용할 Connection 객체를 할당받지 못해 대기 중인 Client에게
@@ -150,7 +147,7 @@ public class ConnectionPool {
     // 사용 중이던 Connection 객체를 occupiedPool 로 부터 제거한다.
     // 그렇지 않으면 ouupied 는 무한대로 부피가 커질 것이다.
 
-    public void remove(Connection con) {
+    public void removeConnectionFromOccupiedPool(Connection con) {
         Connection _con;
         int index = 0;
         for (int i = 0; i < occupiedPool.size(); i++) {
@@ -191,7 +188,7 @@ public class ConnectionPool {
     }
 
     // 사용 가능한 Connection 객체가 존재하는지를 확인
-    public boolean isAvaliable() {
+    public boolean isNotAvaliable() {
         boolean flag = false;
         if (freePool.isEmpty()) {
             // 가용한 Connection 객체가 존재하지 않음

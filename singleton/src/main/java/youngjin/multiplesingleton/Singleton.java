@@ -1,7 +1,9 @@
 package youngjin.multiplesingleton;
 
 public class Singleton {
+    // private static Singleton singleton = new Singleton();
     private static Singleton singleton = null;
+
 
     private Singleton() {
         System.out.println("an instance created.");
