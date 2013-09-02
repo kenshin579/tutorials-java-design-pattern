@@ -3,9 +3,12 @@ package freelec.mediator;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
+/**
+ * Mediator 패턴: 인터페이스를 통하지 않은 의존성의 제거
+ * - Command 패턴에서 작성한 MenuItem 컴포넌트들이 가진 모든 UI 컴포넌트와의 연관관계를 제거하고
+ * Mediator 클래스와 관계를 갖게끔 함.
+ */
 public class NotePad implements ActionListener {
 
     private Menu file;
@@ -17,24 +20,25 @@ public class NotePad implements ActionListener {
 
     private MenuBar bar;
 
-    private TextArea text;
-    private Frame frame;
+    private MyTextArea text;
+    private MyFrame frame;
+    private Mediator med;
 
     public NotePad() {
+        med = new Mediator();
 
-        text = new TextArea();
-        frame = new Frame("NotePad");
+        text = new MyTextArea(med, "TextArea");
+        frame = new MyFrame(med, "NotePad");
 
         file = new Menu("File");
 
-
         // 새로이 작성한 MenuItem을 사용한다.
-        _new = new NewMenuItem("New", text);
-        open = new OpenMenuItem("Open", frame);
-        save = new SaveMenuItem("Save", frame);
-        saveas = new SaveAsMenuItem("Save as", frame);
+        _new = new NewMenuItem(med, "New");
+        open = new OpenMenuItem(med, "Open");
+        save = new SaveMenuItem(med, "Save");
+        saveas = new SaveAsMenuItem(med, "Save as");
 
-        exit = new ExitMenuItem("Exit");
+        exit = new ExitMenuItem(med, "Exit");
         bar = new MenuBar();
 
         file.add(_new);
@@ -43,14 +47,6 @@ public class NotePad implements ActionListener {
         file.add(saveas);
         file.add(exit);
         bar.add(file);
-
-        frame.addWindowListener(
-                new WindowAdapter() {
-                    public void windowClosing(WindowEvent e) {
-                        System.exit(0);
-                    }
-                }
-        );
 
         frame.setMenuBar(bar);
         frame.add(text);
