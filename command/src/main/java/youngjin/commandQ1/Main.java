@@ -1,20 +1,22 @@
-package youngjin;
+package youngjin.commandQ1;
 
-import command.*;
-import drawer.*;
+import youngjin.commandQ1.drawer.DrawCanvas;
+import youngjin.commandQ1.drawer.DrawCommand;
+import youngjin.commandQ1.macrocommand.Command;
+import youngjin.commandQ1.macrocommand.MacroCommand;
 
 import javax.swing.*;
 import java.awt.event.*;
 
 public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
-    // �׸� �׸� �̷�
+    // 그림 그린 이력
     private MacroCommand history = new MacroCommand();
-    // �׸� �׸��� ����
+    // 그림 그리는 영역
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
-    // ���� ��ư
+    // 제거 버튼
     private JButton clearButton = new JButton("clear");
 
-    // ����
+    // 생성자
     public Main(String title) {
         super(title);
 
@@ -33,7 +35,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         show();
     }
 
-    // ActionListener��
+    // ActionListener용
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
             history.clear();
@@ -41,7 +43,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         }
     }
 
-    // MouseMotionListener��
+    // MouseMotionListener용
     public void mouseMoved(MouseEvent e) {
     }
 
@@ -51,7 +53,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         cmd.execute();
     }
 
-    // WindowListener��
+    // WindowListener용
     public void windowClosing(WindowEvent e) {
         System.exit(0);
     }
