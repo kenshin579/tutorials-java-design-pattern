@@ -1,4 +1,4 @@
-package youngjin;
+package youngjin.mediator;
 
 public interface Mediator {
     public abstract void createColleagues();

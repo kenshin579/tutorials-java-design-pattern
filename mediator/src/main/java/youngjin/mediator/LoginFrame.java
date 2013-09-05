@@ -1,4 +1,4 @@
-package youngjin;
+package youngjin.mediator;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,16 +12,16 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueButton buttonOk;
     private ColleagueButton buttonCancel;
 
-    // ����
-    // Colleague���� ���ϰ�, ��ġ�� �Ŀ� ǥ�ø� �����Ѵ�
+    // 생성자
+    // Colleague들을 생성하고, 배치한 후에 표시를 실행한다
     public LoginFrame(String title) {
         super(title);
         setBackground(Color.lightGray);
-        // ���̾ƿ� �Ŵ��� ����ؼ� 4X2�� �׸��带 �����
+        // 레이아웃 매니저를 사용해서 4X2의 그리드를 만든다
         setLayout(new GridLayout(4, 2));
-        // Colleague���� ��
+        // Colleague들의 생성
         createColleagues();
-        // ��ġ
+        // 배치
         add(checkGuest);
         add(checkLogin);
         add(new Label("Username:"));
@@ -30,16 +30,16 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         add(textPass);
         add(buttonOk);
         add(buttonCancel);
-        // ��ȿ/��ȿ�� �ʱ� ����
+        // 유효/무효의 초기 지정
         colleagueChanged();
-        // ǥ��
+        // 표시
         pack();
         show();
     }
 
-    // Colleague���� ���Ѵ�
+    // Colleague들을 생성한다
     public void createColleagues() {
-        // ��
+        // 생성
         CheckboxGroup g = new CheckboxGroup();
         checkGuest = new ColleagueCheckbox("Guest", g, true);
         checkLogin = new ColleagueCheckbox("Login", g, false);
@@ -48,14 +48,14 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         textPass.setEchoChar('*');
         buttonOk = new ColleagueButton("OK");
         buttonCancel = new ColleagueButton("Cancel");
-        // Mediator�� ��Ʈ
+        // Mediator의 세트
         checkGuest.setMediator(this);
         checkLogin.setMediator(this);
         textUser.setMediator(this);
         textPass.setMediator(this);
         buttonOk.setMediator(this);
         buttonCancel.setMediator(this);
-        // Listener�� ��Ʈ
+        // Listener의 세트
         checkGuest.addItemListener(checkGuest);
         checkLogin.addItemListener(checkLogin);
         textUser.addTextListener(textUser);
@@ -64,20 +64,20 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonCancel.addActionListener(this);
     }
 
-    // Colleage������ ������ Colleage�� ��ȿ/��ȿ�� �����Ѵ� 
+    // Colleage에서의 통지로 Colleage의 유효/무효를 판정한다
     public void colleagueChanged() {
-        if (checkGuest.getState()) {                // Guest ���
+        if (checkGuest.getState()) {                // Guest 모드
             textUser.setColleagueEnabled(false);
             textPass.setColleagueEnabled(false);
             buttonOk.setColleagueEnabled(true);
-        } else {                        // Login ���
+        } else {                        // Login 모드
             textUser.setColleagueEnabled(true);
             userpassChanged();
         }
     }
 
-    // textUser �Ǵ� textPass�� ������ �־��
-    // �� Colleage�� ��ȿ/��ȿ�� �����Ѵ�
+    // textUser 또는 textPass의 변경이 있었다
+    // 각 Colleage의 유효/무효를 판정한다
     private void userpassChanged() {
         if (textUser.getText().length() > 0) {
             textPass.setColleagueEnabled(true);
@@ -97,3 +97,4 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         System.exit(0);
     }
 }
+

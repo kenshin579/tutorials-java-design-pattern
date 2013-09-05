@@ -69,7 +69,9 @@ public class NotePad implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         // 이벤트 객체는 모두 Command 인터페이스를 상속받은 것들이므로 로 형 변환 (Class Type Casting)될 수 있다.
+        // 여기서 받은 com은 클릭한 메뉴의 item 객체(ex.Command 인터페이스를 구현한 NewMenuItem)이 된다.
         Command com = (Command) e.getSource();
+
         // Command 인터페이스를 구현한 객체는 execute() 메서드를 구현해야 한다.
         com.execute();
     }
