@@ -14,8 +14,6 @@
         <module>prototype</module>
         <module>facade</module>
         <module>singleton</module>
-        <module>facade</module>
-        <module>facade</module>
         <module>objectpool</module>
         <module>flyweight</module>
         <module>command</module>
