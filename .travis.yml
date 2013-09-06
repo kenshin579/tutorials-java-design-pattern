@@ -3,4 +3,4 @@ language: java
 jdk:
   - oraclejdk
 
-script: mvn clean package
+install: mvn clean package
