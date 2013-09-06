@@ -20,4 +20,11 @@
         <module>mediator</module>
         <module>observer</module>
     </modules>
+    <repositories>
+        <repository>
+            <id>oracle</id>
+            <name>ORACLE JDBC Repository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
