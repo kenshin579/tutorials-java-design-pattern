@@ -24,6 +24,7 @@
         <module>command</module>
         <module>mediator</module>
         <module>observer</module>
+        <module>composite</module>
     </modules>
 
     <build>
