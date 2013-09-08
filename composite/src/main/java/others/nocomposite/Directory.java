@@ -3,6 +3,9 @@ package others.nocomposite;
 import java.util.ArrayList;
 
 public class Directory {
+    private String m_name;
+    private ArrayList m_files = new ArrayList();
+
     public Directory(String name) {
         m_name = name;
     }
@@ -21,14 +24,9 @@ public class Directory {
                 ((Directory) obj).ls();
             else
                 ((File) obj).ls();
-//            if (obj.getClass().getName().equals("Directory"))
-//                ((Directory) obj).ls();
-//            else
-//                ((File) obj).ls();
         }
+        // 왜 -3을 하는가?
         CompositeTestDrive.g_indent.setLength(CompositeTestDrive.g_indent.length() - 3);
     }
 
-    private String m_name;
-    private ArrayList m_files = new ArrayList();
 }
