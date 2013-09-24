@@ -41,7 +41,6 @@ public class NoAbstractUsedByClient {
         tigers[1] = new Tiger(new Area("Tokyo"), new Location("Japan"), 8, 9);
         tigers[2] = new Tiger(new Area("South America"), new Location("Brazil"), 3, 9);
 
-
         usedByClient.lionList(lions);
         usedByClient.tigerList(tigers);
     }

@@ -2,7 +2,7 @@ package freelec.composite.employee;
 
 /**
  * 일반 평사언에 대한 클래스
- * - 불하 직원을 가질 수 없는 경우를 표현함
+ * - 부하 직원을 가질 수 없는 경우를 표현함
  */
 public class Employee {
 
