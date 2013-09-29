@@ -14,18 +14,19 @@
     </properties>
 
     <modules>
-        <module>factory-method</module>
-        <module>web-mvc</module>
-        <module>prototype</module>
-        <module>facade</module>
-        <module>singleton</module>
-        <module>objectpool</module>
-        <module>flyweight</module>
-        <module>command</module>
-        <module>mediator</module>
-        <module>observer</module>
-        <module>composite</module>
         <module>builder</module>
+        <module>command</module>
+        <module>composite</module>
+        <module>facade</module>
+        <module>factory-method</module>
+        <module>flyweight</module>
+        <module>mediator</module>
+        <module>objectpool</module>
+        <module>observer</module>
+        <module>prototype</module>
+        <module>singleton</module>
+        <module>strategy</module>
+        <module>web-mvc</module>
     </modules>
 
     <build>
