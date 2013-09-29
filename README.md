@@ -12,4 +12,4 @@
 시스템 세팅 (Mac)
 ---------------
 Setup mysql on DB
-참고, https://www.evernote.com/shard/s7/sh/7f91a75b-b3cc-477a-9e0c-72feb5457260/e5eac65a2d457536929ec0c697ba29c8
+- 참고, https://www.evernote.com/shard/s7/sh/7f91a75b-b3cc-477a-9e0c-72feb5457260/e5eac65a2d457536929ec0c697ba29c8
