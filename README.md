@@ -9,14 +9,7 @@
 - 디자인 패턴 입문 (영진)
 - Head First Java Design Pattern
 
-
-내용 정리
+시스템 세팅 (Mac)
 ---------------
-* Factory Method - 하위 클래스에서 인스턴스 작성하기
-* Prototype - 복사해서 인스턴스 만들기
-* Facade - 단순한 창구 (API만 사용해서 코딩)
-* Singleton - 인스턴스 한개만 만들어서 재사용
-* Object Pool -
-* Flyweight - 동일한 것을 공유해서 낭비 없애기
-* Command - 명령을 클래스로하기
-* Mediator - 중개인을 통해서 처리하기
+Setup mysql on DB
+참고, https://www.evernote.com/shard/s7/sh/7f91a75b-b3cc-477a-9e0c-72feb5457260/e5eac65a2d457536929ec0c697ba29c8
