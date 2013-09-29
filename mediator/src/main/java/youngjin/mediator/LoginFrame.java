@@ -4,6 +4,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Mediator 인터페이스를 구현, 로그인 dialog를 나타내는 클래스
+ */
 public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueCheckbox checkGuest;
     private ColleagueCheckbox checkLogin;
@@ -70,7 +73,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
             textUser.setColleagueEnabled(false);
             textPass.setColleagueEnabled(false);
             buttonOk.setColleagueEnabled(true);
-        } else {                        // Login 모드
+        } else {                                    // Login 모드
             textUser.setColleagueEnabled(true);
             userpassChanged();
         }
