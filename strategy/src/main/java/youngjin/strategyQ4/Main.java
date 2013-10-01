@@ -12,7 +12,6 @@ public class Main {
         String[] data2 = {
                 "Dumpty", "Bowman", "Carroll", "Elfland", "Alice"
         };
-
         SortAndPrint sort1 = new SortAndPrint(data1, new SelectionSorter());
         SortAndPrint sort2 = new SortAndPrint(data2, new InsertSorter());
         sort1.execute();

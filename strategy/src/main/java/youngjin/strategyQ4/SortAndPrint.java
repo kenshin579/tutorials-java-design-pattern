@@ -10,6 +10,7 @@ public class SortAndPrint {
     }
 
     public void execute() {
+        System.out.println();
         print("Before -> ");
         sorter.sort(data);
         print("After -> ");

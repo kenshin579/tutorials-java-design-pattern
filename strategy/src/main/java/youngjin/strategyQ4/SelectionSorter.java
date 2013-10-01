@@ -10,9 +10,9 @@ public class SelectionSorter implements Sorter {
                     min = j;
                 }
             }
-            Comparable passingplace = data[min];
+            Comparable temp = data[min];
             data[min] = data[i];
-            data[i] = passingplace;
+            data[i] = temp;
         }
     }
 }

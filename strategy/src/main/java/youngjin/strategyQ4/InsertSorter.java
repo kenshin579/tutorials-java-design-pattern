@@ -1,5 +1,10 @@
 package youngjin.strategyQ4;
 
+/**
+ * compareTo에 대한 참조
+ * - http://www.leepoint.net/notes-java/data/expressions/22compareobjects.html
+ * - http://www.tutorialspoint.com/java/java_string_compareto.htm
+ */
 public class InsertSorter implements Sorter {
     @Override
     public void sort(Comparable[] data) {
