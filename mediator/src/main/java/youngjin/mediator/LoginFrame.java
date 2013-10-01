@@ -44,25 +44,28 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     public void createColleagues() {
         // 생성
         CheckboxGroup g = new CheckboxGroup();
-        checkGuest = new ColleagueCheckbox("Guest", g, true);
+        checkGuest = new ColleagueCheckbox("Guest", g, true); // 처음에는 guest 모드로 선택됨
         checkLogin = new ColleagueCheckbox("Login", g, false);
         textUser = new ColleagueTextField("", 10);
         textPass = new ColleagueTextField("", 10);
         textPass.setEchoChar('*');
         buttonOk = new ColleagueButton("OK");
         buttonCancel = new ColleagueButton("Cancel");
-        // Mediator의 세트
+
+        // Mediator의 세트 (checkGuest에게 setMediator 메서드를 통해서 Mediator 구현제가 누구인지 알려줌)
         checkGuest.setMediator(this);
         checkLogin.setMediator(this);
         textUser.setMediator(this);
         textPass.setMediator(this);
         buttonOk.setMediator(this);
         buttonCancel.setMediator(this);
+
         // Listener의 세트
         checkGuest.addItemListener(checkGuest);
         checkLogin.addItemListener(checkLogin);
         textUser.addTextListener(textUser);
         textPass.addTextListener(textPass);
+
         buttonOk.addActionListener(this);
         buttonCancel.addActionListener(this);
     }
