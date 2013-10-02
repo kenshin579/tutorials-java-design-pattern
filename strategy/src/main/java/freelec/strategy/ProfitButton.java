@@ -18,7 +18,7 @@ public class ProfitButton extends JButton implements Command {
 
     // 순이익을 기준으로 하는 투자 전략을 수립하는 메소드
     public void execute() {
-        med.setStrategyByProfit(strategy);
+        med.setStrategyByProfit(strategy); // mediator 중개자에게 통지를 한다.
     }
 
 }

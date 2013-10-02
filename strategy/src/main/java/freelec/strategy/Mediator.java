@@ -2,6 +2,12 @@ package freelec.strategy;
 
 import javax.swing.*;
 
+/**
+ * - 이 예제에서는 Mediator가 Colleague 구성요소에게 지시하는 부분은 없는 것 같다.
+ * <p/>
+ * - GUI 구성요소(ex.ProfitButton)는 Colleague 역할을 한다.
+ * ㅁ.mediator.setStrategyByProfit()을 호출하여 중재가와 통지한다.
+ */
 public class Mediator {
 
     private static Mediator med = new Mediator();
@@ -20,7 +26,6 @@ public class Mediator {
     public void setTableModel() {
         table.setModel(new MyTableModel(stocks));
     }
-
 
     public void setTable(JTable table) {
         this.table = table;

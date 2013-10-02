@@ -19,6 +19,7 @@ public class MyTableModel extends AbstractTableModel {
     }
 
     // 명시된 순번의 column 헤더 타이틀
+    @Override
     public String getColumnName(int col) {
         System.out.println(columnNames[col].toString());
         return columnNames[col].toString();
@@ -57,6 +58,7 @@ public class MyTableModel extends AbstractTableModel {
     }
 
     // table 의 각 cell 에 대한 편집 여부를 설정
+    @Override
     public boolean isCellEditable(int row, int col) {
         return true;
     }
