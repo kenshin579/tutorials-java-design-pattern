@@ -11,8 +11,9 @@ public class SortAndPrint {
 
     public void execute() {
         System.out.println();
+
         print("Before -> ");
-        sorter.sort(data);
+        sorter.sort(data);      // 여기서 sorting을 함
         print("After -> ");
     }
 
