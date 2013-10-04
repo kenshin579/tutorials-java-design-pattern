@@ -7,6 +7,7 @@ import javax.swing.*;
  * <p/>
  * - GUI 구성요소(ex.ProfitButton)는 Colleague 역할을 한다.
  * ㅁ.mediator.setStrategyByProfit()을 호출하여 중재가와 통지한다.
+ * 그면 중개자는 table을 다시 보여주는 역할을 하고 있다.
  */
 public class Mediator {
 
