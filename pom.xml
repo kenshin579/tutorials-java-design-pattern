@@ -27,6 +27,7 @@
         <module>singleton</module>
         <module>strategy</module>
         <module>web-mvc</module>
+        <module>bridge</module>
     </modules>
 
     <build>
