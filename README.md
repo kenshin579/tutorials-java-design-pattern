@@ -44,25 +44,5 @@ root |1234
 </table>
 2. 예제 프로그램(freelec.strategy.Context) Intellij에서 실행하기
 	* resources 폴더에 있는 mysql statement를 mysql DB console에서 실행시킨다. 
-```mysql
-# strategy > src > main > resources > sql.sql
-
-DROP TABLE stock;
-CREATE TABLE stock
-(
-  name     VARCHAR(10) PRIMARY KEY,
-  property INT NOT NULL,
-  sale     INT NOT NULL,
-  profit   INT NOT NULL,
-  rd       INT NOT NULL
-);
-
-INSERT INTO stock VALUES ('DAEWOO', 10000, 1400, 1000, 10);
-INSERT INTO stock VALUES ('IBM', 15000, 1300, 1300, 15);
-INSERT INTO stock VALUES ('MS', 20000, 2400, 3600, 13);
-INSERT INTO stock VALUES ('SUN', 18000, 900, 1100, 8);
-INSERT INTO stock VALUES ('ORACLE', 21000, 1200, 3500, 20);
-
-```
 	* strategy > src > main > java > freelec.strategy > Context.java을 Project 메뉴에서 클릭하여 파일을 연다.
 	* Shift + Ctrl + F9을 클릭하여 Debug Mode로 실행시킨다.
