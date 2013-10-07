@@ -42,7 +42,8 @@ root |1234
 * Directory Name: java-design-pattern</td>
 </tr>
 </table>
-2.resources 폴더에 있는 mysql statement를 mysql DB console에서 실행시킨다. 
+2. 예제 프로그램(freelec.strategy.Context) Intellij에서 실행하기
+	* resources 폴더에 있는 mysql statement를 mysql DB console에서 실행시킨다. 
 ```mysql
 # strategy > src > main > resources > sql.sql
 
@@ -63,7 +64,5 @@ INSERT INTO stock VALUES ('SUN', 18000, 900, 1100, 8);
 INSERT INTO stock VALUES ('ORACLE', 21000, 1200, 3500, 20);
 
 ```
-
-3. 예제 프로그램(freelec.strategy.Context) Intellij에서 실행하기
 	* strategy > src > main > java > freelec.strategy > Context.java을 Project 메뉴에서 클릭하여 파일을 연다.
 	* Shift + Ctrl + F9을 클릭하여 Debug Mode로 실행시킨다.
