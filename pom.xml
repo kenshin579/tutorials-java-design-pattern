@@ -28,6 +28,7 @@
         <module>strategy</module>
         <module>web-mvc</module>
         <module>bridge</module>
+        <module>chain-of-responsibility</module>
     </modules>
 
     <build>
