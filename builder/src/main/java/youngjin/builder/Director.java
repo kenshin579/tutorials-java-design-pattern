@@ -1,5 +1,9 @@
 package youngjin.builder;
 
+/**
+ * 한 개의 문서를 만드는 클래스
+ * - Director는 실제로 HTMLBuilder, TextBuilder인지 구분없이 그냥 Builder의 메서드만을 이용해서 문서를 작성하고 있다.
+ */
 public class Director {
     private Builder builder;
 
