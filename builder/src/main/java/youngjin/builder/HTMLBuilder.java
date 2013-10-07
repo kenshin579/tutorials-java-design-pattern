@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class HTMLBuilder extends Builder {
-    private String filename;                                 // 작성할 파일명
+    private String filename;                                  // 작성할 파일명
     private PrintWriter writer;                               // 파일에 쓸 PrintWriter
 
-    public void makeTitle(String title) {                       // HTML 파일의 타이틀
+    public void makeTitle(String title) {                     // HTML 파일의 타이틀
         filename = title + ".html";                           // 타이틀을 기초로 파일명을 결정
         try {
             writer = new PrintWriter(new FileWriter(filename)); // PrintWriter을 만든다
@@ -32,12 +32,12 @@ public class HTMLBuilder extends Builder {
         writer.println("</ul>");
     }
 
-    public void close() {                                 // 문서의 완성
-        writer.println("</body></html>");                     // 태그를 닫는다
+    public void close() {                                      // 문서의 완성
+        writer.println("</body></html>");                      // 태그를 닫는다
         writer.close();                                        // 파일을 닫는다
     }
 
     public String getResult() {
-        return filename;                                      // 파일명을 반환한다
+        return filename;                                       // 파일명을 반환한다
     }
 }
