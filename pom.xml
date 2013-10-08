@@ -29,6 +29,7 @@
         <module>web-mvc</module>
         <module>bridge</module>
         <module>chain-of-responsibility</module>
+        <module>template-method</module>
     </modules>
 
     <build>
