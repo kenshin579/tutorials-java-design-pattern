@@ -1,5 +1,8 @@
 package youngjin.chainofresponsibility;
 
+/**
+ * support 메서드는 추상 메서드 resolve를 이용한 Template Method 패턴을 사용했음
+ */
 public abstract class Support {
     private String name;                    // 이 트러블 해결자의 이름
     private Support next;                   // 떠넘기는 곳
