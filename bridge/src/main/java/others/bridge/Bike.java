@@ -1,4 +1,4 @@
-package others1.bridge;
+package others.bridge;
 
 /**
  * Refine abstraction 2 in bridge pattern

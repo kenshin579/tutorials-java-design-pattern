@@ -1,4 +1,4 @@
-package others1.bridge;
+package others.bridge;
 
 /**
  * Concrete implementation 2 for bridge pattern

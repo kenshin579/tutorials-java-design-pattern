@@ -1,4 +1,4 @@
-package others1.bridge;
+package others.bridge;
 
 /*
  * Demonstration of bridge design pattern

@@ -1,4 +1,4 @@
-package others1.bridge;
+package others.bridge;
 
 public class Car extends Vehicle {
 
