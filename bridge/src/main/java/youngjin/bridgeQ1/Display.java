@@ -1,4 +1,4 @@
-package youngjin.bridge;
+package youngjin.bridgeQ1;
 
 /**
  * 기능의 클래스 계층 (SuperClass)

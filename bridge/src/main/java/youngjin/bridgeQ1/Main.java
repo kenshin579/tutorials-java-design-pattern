@@ -1,4 +1,4 @@
-package youngjin.bridge;
+package youngjin.bridgeQ1;
 
 /**
  * 기능의 클래스 계층(SuperClass + SubClass): Display, CountDisplay
@@ -12,9 +12,12 @@ public class Main {
         Display d2 = new CountDisplay(new StringDisplayImpl("Hello, World."));
         CountDisplay d3 = new CountDisplay(new StringDisplayImpl("Hello, Universe."));
 
+        RandomDisplay d4 = new RandomDisplay(new StringDisplayImpl("Hello, Random."));
+
         d1.display();
         d2.display();
         d3.display();
         d3.multiDisplay(5);
+        d4.randomDisplay(5);
     }
 }

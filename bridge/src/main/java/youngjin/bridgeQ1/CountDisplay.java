@@ -1,4 +1,4 @@
-package youngjin.bridge;
+package youngjin.bridgeQ1;
 
 /**
  * SubClass: 기능을 추가하는 클래스
