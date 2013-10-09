@@ -1,4 +1,4 @@
-package youngjin.chainofresponsibility;
+package youngjin.chainofresponsibilityQ4;
 
 /**
  * Handler(처리자)의 역할 담당:
@@ -21,13 +21,18 @@ public abstract class Support {
     }
 
     public final void support(Trouble trouble) {   // 트러블 해결의 수순
-        if (resolve(trouble)) {
-            done(trouble);
-        } else if (next != null) {
-            next.support(trouble);
-        } else {
-            fail(trouble);
+        Support current = this;
+
+        while (current != null) {
+            if (current.resolve(trouble)) {
+                current.done(trouble);
+                break;
+            } else if (current.next == null) {
+                current.fail(trouble);
+            }
+            current = current.next;
         }
+
     }
 
     public String toString() {              // 문자열 표현
