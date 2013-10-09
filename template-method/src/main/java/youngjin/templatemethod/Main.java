@@ -1,5 +1,8 @@
 package youngjin.templatemethod;
 
+/**
+ * Template Method 패턴은 추상 클래스에 알고리즘/로직이 들어가 있는 패턴을 의미한다.
+ */
 public class Main {
     public static void main(String[] args) {
         // 'H'을 가진 CharDisplay 인스턴스를 1개 만든다>
