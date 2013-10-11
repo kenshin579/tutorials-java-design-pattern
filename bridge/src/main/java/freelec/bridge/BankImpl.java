@@ -1,12 +1,13 @@
 package freelec.bridge;
 
-// Concrete implementor
-// 위임 받을 것을 실제 처리하는 클래스
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Concrete implementor
+ * 위임 받을 것을 실제 처리하는 클래스
+ */
 public class BankImpl implements BankIF {
 
     private Wrapper wrap;
@@ -18,6 +19,7 @@ public class BankImpl implements BankIF {
 
     public void deposit(String id, int howmuch)
             throws IDNotFoundException, InvalidTransactionException {
+
         Account account = getAccount(id);
         if (account == null) {
             throw new IDNotFoundException();
@@ -53,9 +55,12 @@ public class BankImpl implements BankIF {
 
     public Account getAccount(String id) {
         Account account = null;
+
         String query = "select * from account where id = ?";
         PreparedStatement pStmt = wrap.getPreparedStatement(query);
+
         wrap.setParameter(pStmt, 1, id);
+
         ResultSet rset = wrap.select(pStmt);
         if (wrap.hasNextElements(rset)) {
             try {
@@ -83,4 +88,5 @@ public class BankImpl implements BankIF {
     }
 
 }
+
 

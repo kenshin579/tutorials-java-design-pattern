@@ -1,5 +1,8 @@
 package freelec.bridge;
 
+/**
+ * 기능이 하나 추가된 subclass
+ */
 public class AdvancedBank extends Bank {
 
     public AdvancedBank(BankIF bank) {

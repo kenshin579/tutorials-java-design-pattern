@@ -1,6 +1,8 @@
 package freelec.bridge;
 
-// Abstration 클래스로서 기본 기능만이 선언되어 있음
+/**
+ * Abstration 클래스로서 기본 기능만이 선언되어 있음
+ */
 public class Bank {
 
     // bridge 역할을 하는 객체
@@ -23,4 +25,5 @@ public class Bank {
     }
 
 }
+
 
