@@ -30,6 +30,7 @@
         <module>bridge</module>
         <module>chain-of-responsibility</module>
         <module>template-method</module>
+        <module>memento</module>
     </modules>
 
     <build>
