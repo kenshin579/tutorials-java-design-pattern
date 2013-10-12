@@ -33,6 +33,7 @@
         <module>memento</module>
         <module>state</module>
         <module>proxy</module>
+        <module>decorator</module>
     </modules>
 
     <build>
