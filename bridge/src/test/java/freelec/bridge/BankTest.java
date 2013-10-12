@@ -64,7 +64,7 @@ public class BankTest {
     @Test
     public void test인출확인() throws Exception {
         String id = "dummy";
-        int expectedAmount = 99999;
+        int expectedAmount = 99;
         int commision = 100;
 
         BankImpl bankimp = new BankImpl();

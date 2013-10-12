@@ -13,3 +13,5 @@ INSERT INTO account VALUES ('frank', 4000);
 INSERT INTO account VALUES ('joe', 5000);
 INSERT INTO account VALUES ('angela', 4000);
 INSERT INTO account VALUES ('david', 10000);
+INSERT INTO account VALUES ('dummy', 10000);
+INSERT INTO account VALUES ('dummy2', 10000);
