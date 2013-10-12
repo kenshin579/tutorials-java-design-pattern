@@ -31,6 +31,8 @@
         <module>chain-of-responsibility</module>
         <module>template-method</module>
         <module>memento</module>
+        <module>state</module>
+        <module>proxy</module>
     </modules>
 
     <build>
