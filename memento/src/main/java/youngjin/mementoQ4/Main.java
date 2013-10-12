@@ -1,8 +1,8 @@
-package youngjin.memento;
+package youngjin.mementoQ4;
 
 
-import youngjin.memento.game.Gamer;
-import youngjin.memento.game.Memento;
+import youngjin.mementoQ4.game.Gamer;
+import youngjin.mementoQ4.game.Memento;
 
 /**
  * Caretaker(관리인)의 역할: Main 클래스
