@@ -12,6 +12,8 @@
 
 카페주소: http://cafe.naver.com/happinessfactory
 
+**아직 정리되지 않는 패턴들**
+* [last updated 10/20]State, Decorator, Adapter, Iterator, Interpreter, Observer
 
 ## 시스템 세팅 (Mac)
 ------------------------
