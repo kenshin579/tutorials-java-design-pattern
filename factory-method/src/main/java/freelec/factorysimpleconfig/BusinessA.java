@@ -30,15 +30,14 @@ public class BusinessA {
             e.printStackTrace();
         }
     }
+
     public ResultSet selectAll() {
         String query = "select * from product";
         ResultSet resultSet = null;
-        try
-        {
+        try {
             Statement stmt = con.createStatement();
             resultSet = stmt.executeQuery(query);
-        }catch(SQLException e)
-        {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return resultSet;

@@ -1,4 +1,4 @@
-package freelec.noobserver.server;
+package freelec.noobserver;
 
 import java.sql.Connection;
 
@@ -11,8 +11,8 @@ public class ObjectPoolManager {
     // 오라클 사용자를 위한 url
     //private static final String url =  "jdbc:oracle:thin:@"+"127.0.0.1"+":1521:ORCL";
 
-    private static final String id = "scott";
-    private static final String passwd = "tiger";
+    private static final String id = "root";
+    private static final String passwd = "1234";
     // 오라클 사용자를 위한 아이디와 패트워드
 
     private static final int min = 5;

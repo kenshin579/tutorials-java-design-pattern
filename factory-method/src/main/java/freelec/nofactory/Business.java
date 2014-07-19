@@ -10,14 +10,12 @@ public class Business {
     Database db = new Database();
     Connection con = db.getConnection();
 
-    public void insert(String id , String code , int quality ){
-        String query = "insert into product values ( "+id+","+code+","+quality+")";
-        try
-        {
+    public void insert(String id, String code, int quality) {
+        String query = "insert into product values ( " + id + "," + code + "," + quality + ")";
+        try {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(query);
-        }catch(SQLException e)
-        {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -25,12 +23,10 @@ public class Business {
     public ResultSet selectAll() {
         String query = "select * from product";
         ResultSet resultSet = null;
-        try
-        {
+        try {
             Statement stmt = con.createStatement();
             resultSet = stmt.executeQuery(query);
-        }catch(SQLException e)
-        {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return resultSet;

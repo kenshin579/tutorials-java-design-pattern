@@ -1,4 +1,4 @@
-package freelec.noobserver.server;
+package freelec.noobserver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -20,7 +20,10 @@ public class DBConfig {
     public static String URL;
     public static String DRIVER;
 
-    private DBConfig() {};
+    private DBConfig() {
+    }
+
+    ;
 
     public static DBConfig getInstance() {
         if (dbConfig == null) {
@@ -46,7 +49,7 @@ public class DBConfig {
             URL = ResourceBundle.getBundle("server").getString("url");
             USER_NAME = ResourceBundle.getBundle("server").getString("username");
             PASSWORD = ResourceBundle.getBundle("server").getString("password");
-        } catch(MissingResourceException e) {
+        } catch (MissingResourceException e) {
             e.printStackTrace();
         }
     }

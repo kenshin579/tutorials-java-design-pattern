@@ -6,7 +6,7 @@ package youngjin.bridge;
  * - 이 클래스에서 ConcreteClass를 자유롭게 사용할 수 있도록 함 (인터페이스를 통해서)
  */
 public class Display {
-    private DisplayImpl impl;           // 다리 역할하는 부분
+    private DisplayImpl impl;           // 다리 역할하는 부분 (위임)
 
     public Display(DisplayImpl impl) {
         this.impl = impl;

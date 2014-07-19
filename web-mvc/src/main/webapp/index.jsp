@@ -5,6 +5,7 @@
 </head>
 <body>
 <p><a href="student.jsp">Student</a></p>
+
 <p><a href="member.jsp">Member</a></p>
 </body>
 </html>

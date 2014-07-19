@@ -10,7 +10,7 @@ public class MyDate {
     private int month;
     private int day;
 
-    public void setYear (int year) throws NonDateFormatException {
+    public void setYear(int year) throws NonDateFormatException {
         if (year < 0) {
             throw new NonDateFormatException("invalid year format");
         } else {

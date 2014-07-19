@@ -1,4 +1,4 @@
-package freelec.noobserver.client;
+package freelec.noobserver;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;

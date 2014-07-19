@@ -1,4 +1,4 @@
-package freelec.noobserver.server;
+package freelec.noobserver;
 
 import java.sql.*;
 import java.util.Vector;
@@ -101,5 +101,4 @@ public class JulyThread extends Thread {
     public static void main(String args[]) {
         new JulyThread().start();
     }
-
 }

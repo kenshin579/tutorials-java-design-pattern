@@ -26,7 +26,7 @@ public class OracleDatabaseImpl implements Database {
 
         try {
             // For Oracle
-            con=DriverManager.getConnection("jdbc:oracle:thin:@"+server+":1521:ORCL","scott","tiger");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@" + server + ":1521:ORCL", "scott", "tiger");
 
             // For MySQL
 //            String url = "jdbc:mysql://" + "localhost:3306/statictest";

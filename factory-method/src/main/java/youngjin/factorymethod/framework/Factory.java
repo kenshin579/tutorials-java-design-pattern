@@ -7,7 +7,15 @@ public abstract class Factory {
         return p;
     }
 
+    public final Product create(String owner, String type) {
+        Product p = createProduct(owner, type);
+        registerProduct(p);
+        return p;
+    }
+
     protected abstract Product createProduct(String owner);
+
+    protected abstract Product createProduct(String owner, String type);
 
     protected abstract void registerProduct(Product product);
 }

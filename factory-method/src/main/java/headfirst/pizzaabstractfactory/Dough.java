@@ -1,5 +1,5 @@
 package headfirst.pizzaabstractfactory;
 
 public interface Dough {
-	public String toString();
+    public String toString();
 }

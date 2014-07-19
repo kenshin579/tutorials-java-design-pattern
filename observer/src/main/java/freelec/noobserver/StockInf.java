@@ -1,4 +1,4 @@
-package freelec.noobserver.client;
+package freelec.noobserver;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
