@@ -1,6 +1,11 @@
-package freelec.noobserver;
+package freelec.noobserver.server;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Vector;
 
 public class JulyThread extends Thread {
@@ -101,4 +106,5 @@ public class JulyThread extends Thread {
     public static void main(String args[]) {
         new JulyThread().start();
     }
+
 }
