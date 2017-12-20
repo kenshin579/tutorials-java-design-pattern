@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="log.file" value="webCalc.log"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%5p &lt;%d{yyyy-MM-dd HH:mm:ss}&gt;[%C:%L] [%thread] %m%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="dailyfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--See http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+        <!--and http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy-->
+        <!--for further documentation-->
+        <File>${log.dir}/${log.file}</File>
+        <encoder>
+            <pattern>%5p &lt;%d{yyyy-MM-dd HH:mm:ss}&gt;[%C:%L] %m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/${log.file}.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="dailyfile"/>
+    </root>
+</configuration>
