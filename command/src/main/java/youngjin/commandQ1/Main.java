@@ -6,7 +6,12 @@ import youngjin.commandQ1.macrocommand.Command;
 import youngjin.commandQ1.macrocommand.MacroCommand;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
     // 그림 그린 이력

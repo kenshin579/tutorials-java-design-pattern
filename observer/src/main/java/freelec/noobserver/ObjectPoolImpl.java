@@ -1,4 +1,4 @@
-package freelec.noobserver;
+package freelec.noobserver.server;
 
 public class ObjectPoolImpl implements ObjectPoolIF {
 
