@@ -15,4 +15,4 @@ public class AdvancedBank extends Bank {
         bank.deposit(to, howmuch);
     }
 
-};
+}
