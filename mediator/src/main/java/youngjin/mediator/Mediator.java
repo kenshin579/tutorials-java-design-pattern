@@ -1,8 +1,5 @@
 package youngjin.mediator;
 
-/**
- *
- */
 public interface Mediator {
     public abstract void createColleagues(); // Colleague들을 생성한다
 
